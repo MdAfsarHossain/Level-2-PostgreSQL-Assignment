@@ -26,3 +26,36 @@ CREATE TABLE species (
     discovery_date DATE,
     conservation_status VARCHAR(50)
 );
+
+-- Insert data into the Species table
+INSERT INTO
+    species (
+        common_name,
+        scientific_name,
+        discovery_date,
+        conservation_status
+    )
+VALUES (
+        'Snow Leopard',
+        'Panthera uncia',
+        '1775-01-01',
+        'Endangered'
+    ),
+    (
+        'Bengal Tiger',
+        'Panthera tigris',
+        '1758-01-01',
+        'Endangered'
+    ),
+    (
+        'Red Panda',
+        'Ailurus fulgens',
+        '1825-01-01',
+        'Vulnerable'
+    ),
+    (
+        'Asiatic Elephant',
+        'Elephas maximus indicus',
+        '1758-01-01',
+        'Endangered'
+    );
