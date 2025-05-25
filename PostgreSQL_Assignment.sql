@@ -166,3 +166,23 @@ WHERE
         YEAR
         FROM discovery_date
     ) < 1800;
+
+-- Problem 8
+SELECT
+    sighting_id,
+    CASE
+        WHEN EXTRACT(
+            HOUR
+            FROM sighting_time
+        ) < 12 THEN 'Morning'
+        WHEN EXTRACT(
+            HOUR
+            FROM sighting_time
+        ) BETWEEN 12 AND 16  THEN 'Afternoon'
+        WHEN EXTRACT(
+            HOUR
+            FROM sighting_time
+        ) BETWEEN 17 AND 23  THEN 'Evening'
+        ELSE 'Unknown'
+    END AS time_of_day
+FROM sightings;
