@@ -1,3 +1,6 @@
+-- Create Database
+CREATE DATABASE conservation_db;
+
 -- Create Rangers Table
 CREATE TABLE rangers (
     ranger_id SERIAL PRIMARY KEY,
