@@ -17,3 +17,12 @@ VALUES (
         'Carol King',
         'Mountain Range'
     );
+
+-- Create Species table
+CREATE TABLE species (
+    species_id SERIAL PRIMARY KEY,
+    common_name VARCHAR(50),
+    scientific_name VARCHAR(50),
+    discovery_date DATE,
+    conservation_status VARCHAR(50)
+);
