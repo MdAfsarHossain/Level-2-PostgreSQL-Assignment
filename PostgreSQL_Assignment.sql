@@ -59,3 +59,15 @@ VALUES (
         '1758-01-01',
         'Endangered'
     );
+
+-- Create Sightings table
+CREATE TABLE sightings (
+    sighting_id SERIAL PRIMARY KEY,
+    ranger_id INT,
+    species_id INT,
+    sighting_time TIMESTAMP,
+    location VARCHAR(255),
+    notes TEXT,
+    FOREIGN KEY (ranger_id) REFERENCES rangers (ranger_id),
+    FOREIGN KEY (species_id) REFERENCES species (species_id)
+);
