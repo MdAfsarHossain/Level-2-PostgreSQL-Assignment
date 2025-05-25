@@ -45,3 +45,9 @@
 #### `UPDATE` স্টেটমেন্ট ব্যবহার করে টেবিলের বিদ্যমান ডেটা পরিবর্তন করা যায়। UPDATE স্টেটমেন্টের সাথে SET ক্লজ ব্যবহার করে কলামের নতুন মান নির্ধারণ করা হয় এবং WHERE ক্লজ ব্যবহার করে কোন সারিগুলি আপডেট করতে হবে তা নির্দিষ্ট করা হয়। উদাহরণস্বরূপ, `UPDATE species SET conservation_status = 'Historic' WHERE discovery_date < '1800-01-01';` - এই ক্যোয়ারী সেই প্রজাতিগুলির conservation status 'Historic' তে আপডেট করবে যেগুলি ১৮০০ সালের আগে আবিষ্কৃত হয়েছে।
 
 ---
+
+## 8. What is the significance of the `JOIN` operation, and how does it work in PostgreSQL?
+
+#### JOIN অপারেশন দুটি বা ততোধিক টেবিলের সারিগুলোকে তাদের মধ্যে সম্পর্কিত কলামের মানের ভিত্তিতে একত্রিত করে একটি নতুন টেবিল তৈরি করে। এটি একাধিক টেবিল থেকে ডেটা পুনরুদ্ধার এবং একত্রিত করার জন্য অপরিহার্য। PostgreSQL এ বিভিন্ন ধরনের JOIN রয়েছে, যেমন: `INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN`, এবং `FULL OUTER JOIN`।
+
+---
