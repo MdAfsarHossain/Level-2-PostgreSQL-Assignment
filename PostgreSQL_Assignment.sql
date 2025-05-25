@@ -178,11 +178,11 @@ SELECT
         WHEN EXTRACT(
             HOUR
             FROM sighting_time
-        ) BETWEEN 12 AND 16  THEN 'Afternoon'
+        ) BETWEEN 12 AND 17  THEN 'Afternoon'
         WHEN EXTRACT(
             HOUR
             FROM sighting_time
-        ) BETWEEN 17 AND 23  THEN 'Evening'
+        ) > 17 THEN 'Evening'
         ELSE 'Unknown'
     END AS time_of_day
 FROM sightings;
