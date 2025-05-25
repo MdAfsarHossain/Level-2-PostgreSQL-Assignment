@@ -137,3 +137,13 @@ FROM rangers
     JOIN sightings USING (ranger_id)
 GROUP BY
     name;
+
+-- Problem 5
+SELECT common_name
+FROM species
+WHERE
+    species_id NOT IN (
+        SELECT DISTINCT
+            species_id
+        FROM sightings
+    );
