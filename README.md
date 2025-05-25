@@ -57,3 +57,21 @@
 #### GROUP BY ক্লজ একই মানের কলামের ভিত্তিতে সারিগুলোকে গ্রুপ করার জন্য ব্যবহৃত হয়। এটি অ্যাগ্রিগেশন ফাংশন (যেমন COUNT(), SUM(), AVG(), MIN(), MAX()) ব্যবহার করে প্রতিটি গ্রুপের জন্য সংক্ষিপ্ত ফলাফল তৈরি করতে সহায়তা করে। উদাহরণস্বরূপ, `SELECT region, COUNT(*) FROM rangers GROUP BY region;` - এই ক্যোয়ারী প্রতিটি অঞ্চলে কতজন রেঞ্জার আছে তা দেখাবে।
 
 ---
+
+## 10. How can you calculate aggregate functions like `COUNT()`, `SUM()`, and `AVG()` in PostgreSQL?
+
+#### PostgreSQL এ অ্যাগ্রিগেট ফাংশনগুলো একাধিক সারির উপর গণনা করে একটি একক মান প্রদান করে।
+
+- `COUNT():` একটি গ্রুপের সারির সংখ্যা গণনা করে।
+- `SUM():` একটি কলামের মানের যোগফল নির্ণয় করে।
+- `AVG():` একটি কলামের মানের গড় নির্ণয় করে।
+
+#### উদাহরণস্বরূপ:
+
+`SELECT COUNT(*) FROM sightings;` - মোট sightings এর সংখ্যা গণনা করে।
+
+`SELECT SUM(species_id) FROM sightings;` - sightings টেবিলের species_id কলামের মানগুলির যোগফল নির্ণয় করে (যদিও এটি একটি বাস্তবসম্মত উদাহরণ নয়)।
+
+`SELECT AVG(species_id) FROM sightings;` - sightings টেবিলের species_id কলামের মানগুলির গড় নির্ণয় করে।
+
+---
